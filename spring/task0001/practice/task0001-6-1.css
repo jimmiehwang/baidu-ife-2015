@@ -1,0 +1,39 @@
+/**
+ * task0001下的任务6.1
+ *
+ * 用两种方法来实现一个背景色为红色、宽度为960px的<DIV>在浏览器中居中（一列布局）
+ *
+ * @author Jimmie Hwang
+ * @create 2016/4/13
+ *
+ */
+
+
+/*第一种方法*/
+/*div {
+  margin: 0 auto;
+  width: 960px;
+  background-color: red;
+}*/
+
+
+/*第二种方法（兼容IE）*/
+body { text-align: center; }
+
+  div {
+    margin: 0 auto;
+    width: 960px;
+    background-color: red;
+    text-align: left;
+  }
+
+
+/*第三种方法(不推荐)*/
+/*div {
+  position: relative;
+  left: 50%;
+  margin-left: -480px;
+  width: 960px;
+  background-color: red;
+}
+*/

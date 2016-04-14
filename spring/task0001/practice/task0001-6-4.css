@@ -1,0 +1,90 @@
+/**
+ * task0001下的任务6.4
+ *
+ * 用两种不同的方式来实现一个三列布局，其中左侧和右侧的部分宽度固定，
+ * 中间部分宽度随浏览器宽度的变化而自适应变化）
+ *
+ * @author Jimmie Hwang
+ * @create 2016/4/13
+ *
+ */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/*第一种方法（定位）：*/
+ /*  .left {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100px;
+  height: 200px;
+  background-color: red;
+ }
+
+ .mid {
+  margin-left: 100px;
+  margin-right: 200px;
+  height: 200px;
+  background-color: blue;
+ }
+
+ .right {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 200px;
+  height: 200px;
+  background-color: yellow;
+ }
+  */
+
+/*第二种方法（浮动）*/
+/*  .left {
+ float: left;
+ width: 100px;
+ height: 200px;
+ background-color: red;
+}
+
+.mid {
+ height: 200px;
+ background-color: blue;
+}
+
+.right {
+ float: right;
+ width: 200px;
+ height: 200px;
+ background-color: yellow;
+}
+*/
+
+
+/* 第三种方法（负边距） */
+.fl { float: left; }
+
+.center {
+  width: 100%;
+  height: 200px;
+  background: yellow;
+}
+  .center .mid{
+    margin-right: 100px;
+    padding: 0 110px;
+  }
+
+.left{
+    margin-left: -100%;
+    width: 100px;
+    height: 200px;
+    background: green;
+}
+
+.right{
+    margin-left: -200px;
+    width: 200px;
+    height: 200px;
+    background: blue;
+}

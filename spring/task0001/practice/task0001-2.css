@@ -1,0 +1,21 @@
+/**
+ * task0001下的任务2.1
+ *
+ * @author Jimmie Hwang
+ * @create 2016/4/13
+ *
+ */
+
+h1 { color: blue; }
+
+h2 { font-size: 14px; }
+
+p {
+  font-size: 12px;
+  color: yellow;
+  background-color: #000;
+}
+
+img {
+  border: 2px solid red;
+}

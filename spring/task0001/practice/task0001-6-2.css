@@ -1,0 +1,46 @@
+/**
+ * task0001下的任务6.2
+ *
+ * 有的圆角矩形是复杂图案，无法直接用border-radius，请在不使用border-radius的情况下
+ * 实现一个可复用的高度和宽度都自适应的圆角矩形
+ *
+ * @author Jimmie Hwang
+ * @create 2016/4/13
+ *
+ */
+
+.bor div { height: 1px; }
+
+  .b1 {
+    margin: 0 3px;
+    background-color: black;
+   }
+
+  .b2,
+  .b3,
+  .b4,
+  .mid {
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+  }
+
+  .b2 {
+    margin: 0 2px;
+  }
+
+  .b3 {
+    margin: 0 1px;
+  }
+
+  .b4 {
+    margin: 0 1px;
+  }
+
+.mid p {
+  margin: 0;
+  padding:0 10px;
+  font-size: 12px;
+  line-height: 24px;
+  white-space: pre-wrap;
+}
+
