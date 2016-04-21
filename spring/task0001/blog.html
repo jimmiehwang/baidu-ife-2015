@@ -4,7 +4,7 @@
  *
  * @author Jimmie Hwang
  * @create 2016/4/15
- *
+ * @update 2016/4/19
  */
 -->
 
@@ -12,9 +12,255 @@
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
-  <title>blog</title>
+  <title>Blog</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+  <article id="blog">
+    <header>
+      <div class="mid">
+        <h1>Jimmie Hwang</h1>
+        <nav>
+          <a href="index.html">首页</a>
+          <a href="blog.html">文章</a>
+          <a href="gallery.html">作品</a>
+          <a href="about.html">关于</a>
+        </nav>
+      </div>
+      <a class="github" href="https://github.com/jimmiehwang">
+        <img src="img/icon-github.png" alt="github链接">
+      </a>
+    </header><!-- header end -->
 
+    <div class="mid">
+      <div class="left fl">
+        <div class="post">
+          <div class="piece">
+            <p class="date">4.12</p>
+            <p class="type">css</p>
+          </div>
+          <h2>为什么a标签中使用img后的高度多了几个像素？</h2>
+          <h3>百度前端技术学院笔记</h3>
+          <p>a元素下有一个匿名文本，这个文本外有一个匿名行级盒子，它有的默认vertical-align是baseline的，而且往往因为上文line-height的影响，使它有个line-height，从而使其有了高度，因为baseline对齐的原因，这个匿名盒子就会下沉，往下撑开一些距离，所以把a撑高了。</p>
+          <p>解决办法一：是消除掉匿名盒子的高度，也就是给a设置line-height:0或font-size:0;</p>
+          <p>解决办法二：是给两者vertical-align:top，让其top对齐，而不是baseline对齐</p>
+          <p>解决办法三：是给img以display:block，让它和匿名行级盒子不在一个布局上下文中，也就不存在行级盒的对齐问题</p>
+          <p>其他解决办法也有，但这些都是从根本上解决问题</p>
+          <span>Jimmie Hwang 发表于 2015年4月12日</span>
+        </div>
+
+        <div class="post">
+          <div class="piece">
+            <p class="date">4.12</p>
+            <p class="type">css</p>
+          </div>
+          <h2>解决浏览器窗口变小后右面出现空白背景颜色或者图片不能全屏填充的方法</h2>
+          <h3>百度前端技术学院笔记</h3>
+          <p>在做全屏网页的时候会出现这样的情况：</p>
+          <p>窗口最大化显示时正常，当缩小窗口时，出现了滚动条，将滚动条拖动到右侧就会出现空白，而且窗口越小时空白越大，背景颜色都不显示但是元素还在。</p>
+          <p>问题的根本在于：当窗口缩小时，浏览器默认100%宽度为浏览器窗口的宽度。而忽略了下部内容层固定宽度(980px)。从而出现了固定宽度大于100%宽度的现象。浏览以此理解来解析页面，就出现了容器宽度理解上的差异，出现了一个非常奇特的BUG。</p>
+          <p>我们分析，问题的解决之道：既然是宽度理解上的差异，只需要告知浏览器页面容器的宽度，头部元素的宽度不能小于内容层的宽度即可。当浏览器窗口缩小时，保持页面容器和头部元素的最小宽度为内容层的宽度。这样就解决了宽度上出现问题</p>
+          <p>解决办法：</p>
+          <pre>
+            width:100%;
+            min-width:980px;
+          </pre>
+          <span>Jimmie Hwang 发表于 2015年4月12日</span>
+        </div>
+
+        <div class="post">
+          <div class="piece">
+            <p class="date">4.12</p>
+            <p class="type">github</p>
+          </div>
+          <h2>怎样用github pages搭blog/访问分支的静态文件?</h2>
+          <h3>百度前端技术学院笔记</h3>
+          <p>github pages有两类： 你如果起个名为chendell.github.io的repository, 那么他的master分支上的文件就能在chendell.github.io的根目录访问到。</p>
+          <p>而如果是其他的repositories，比如这个repository名字叫node，那么建一个gh-pages分支;创建gh-pages分支,通过github page/你项目的名称就可以访问到那个分支的静态文件</p>
+          <span>Jimmie Hwang 发表于 2015年4月12日</span>
+        </div>
+
+        <nav>
+          <a class="disable">第一页</a>
+          <a class="disable">上一页</a>
+          <a class="sel" href="">1</a>
+          <a href="">2</a>
+          <a href="">3</a>
+          <a href="">4</a>
+          <a href="">···</a>
+          <a href="">下一页</a>
+          <a href="">最后页</a>
+        </nav>
+      </div><!-- left end -->
+
+      <div class="right fr">
+        <div class="search">
+          <form action="" method="get">
+            <input type="text" placeholder="Keywords"><button>GO</button>
+          </form>
+        </div>
+
+        <div class="classify">
+          <a href="">HTML</a>
+          <a href="">CSS</a>
+          <a href="">JavaScript</a>
+          <a href="">其他文章</a>
+        </div>
+
+        <div class="calendar">
+          <table>
+            <caption><span class="fl"><a href="">&lt;</a></span>2015.04 <span class="fr"><a href="">&gt;</a></span></caption>
+            <tbody>
+              <thead>
+                <tr>
+                  <td>M</td>
+                  <td>T</td>
+                  <td>W</td>
+                  <td>T</td>
+                  <td>F</td>
+                  <td>S</td>
+                  <td>S</td>
+                </tr>
+              </thead>
+              <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+              </tr>
+              <tr>
+                <td>5</td>
+                <td>6</td>
+                <td>7</td>
+                <td>8</td>
+                <td class="occur"><span>9</span></td>
+                <td>10</td>
+                <td>11</td>
+              </tr>
+              <tr>
+                <td>12</td>
+                <td>13</td>
+                <td>14</td>
+                <td>15</td>
+                <td>16</td>
+                <td>17</td>
+                <td>18</td>
+              </tr>
+              <tr>
+                <td>19</td>
+                <td>20</td>
+                <td class="pre">21</td>
+                <td>22</td>
+                <td>23</td>
+                <td>24</td>
+                <td>25</td>
+              </tr>
+              <tr>
+                <td>26</td>
+                <td>27</td>
+                <td>28</td>
+                <td>29</td>
+                <td>30</td>
+                <td></td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="tag">
+          <h3>Tags</h3>
+          <p>
+            <span class="big">JavaScript</span>
+            <span class="medium">CSS</span>
+            <span>flex</span>
+          </p>
+          <p>
+            <span>WebGL</span>
+            <span class="big">HTML</span>
+            <span class="incre">Canvas</span>
+          </p>
+          <p>
+            <span class="incre">prototype</span>
+            <span class="medium">HTML5</span>
+            <span>grid</span>
+            <span class="incre">nodeJS</span>
+          </p>
+          <p>
+            <span class="incre">CSS3</span>
+            <span class="medium">jQuery</span>
+            <span class="medium">ECharts</span>
+          </p>
+        </div>
+      </div><!-- right end -->
+    </div><!-- mid end -->
+
+    <footer class="fl">
+      <nav>
+        <a href="">首页</a>
+        <a href="">文章</a>
+        <a href="">作品</a>
+        <a href="">关于</a>
+      </nav>
+      <div class="mid">
+        <dl>
+          <dt>学习资料</dt>
+          <dd><a href="">LINK</a></dd>
+          <dd><a class="under" href="">Hover时样式</a></dd>
+          <dd><a href="">LINK</a></dd>
+          <dd><a href="">LINK</a></dd>
+          <dd><a href="">LINK</a></dd>
+          <dd><a href="">LINK</a></dd>
+        </dl>
+
+        <dl>
+          <dt>友情链接</dt>
+          <dd><a href="">LINK</a></dd>
+          <dd><a class="under" href="">Hover时样式</a></dd>
+          <dd><a href="">LINK</a></dd>
+          <dd><a href="">LINK</a></dd>
+        </dl>
+
+        <dl>
+          <dt>学习资料</dt>
+          <dd><a href="">LINK</a></dd>
+          <dd><a class="under" href="">Hover时样式</a></dd>
+          <dd><a href="">LINK</a></dd>
+          <dd><a href="">LINK</a></dd>
+          <dd><a href="">LINK</a></dd>
+          <dd><a href="">LINK</a></dd>
+        </dl>
+
+        <dl>
+          <dt>学习资料</dt>
+          <dd><a href="">LINK</a></dd>
+          <dd><a class="under" href="">Hover时样式</a></dd>
+          <dd><a href="">LINK</a></dd>
+          <dd><a href="">LINK</a></dd>
+          <dd><a href="">LINK</a></dd>
+          <dd><a href="">LINK</a></dd>
+        </dl>
+
+        <dl>
+          <dt>友情链接</dt>
+          <dd><a href="">LINK</a></dd>
+          <dd><a class="under" href="">Hover时样式</a></dd>
+          <dd><a href="">LINK</a></dd>
+          <dd><a href="">LINK</a></dd>
+        </dl>
+      </div><!-- mid end -->
+
+      <p>版权信息</p>
+
+      <a href="https://github.com/jimmiehwang">
+        <img src="img/icon-github.png" alt="github">
+      </a>
+    </footer><!-- footer end -->
+
+
+  </article>
 </body>
 </html>

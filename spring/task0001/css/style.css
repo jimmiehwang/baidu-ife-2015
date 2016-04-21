@@ -3,7 +3,7 @@
  *
  * @author Jimmie Hwang
  * @create 2016/4/15
- *
+ * @update 2016/4/20
  */
 
 
@@ -16,7 +16,7 @@
 
 body {
   min-width: 980px;
-  font-family: Arial, "Microsoft YaHei", "SimSun",  sans-serif;
+  font-family: Arial, 'Microsoft YaHei', 'SimHei', 'STHeiti', sans-serif;
   background-color: #eee;
 }
 
@@ -40,12 +40,14 @@ img { border: none; }
 
 .under { text-decoration: underline; }
 
+.clear { clear: both; }
 
 a:hover { text-decoration: underline; }
 
 .mar-r { margin-right: 0 !important; }
 
 
+/*header begin*/
 header {
   position: relative;
   width: 100%;
@@ -89,8 +91,10 @@ header {
       display: none;
     }
   }
+/*header end*/
 
 
+/*footer begin*/
 footer {
   position: relative;
   width: 100%;
@@ -136,10 +140,59 @@ footer {
     bottom: 0;
     left: 50%;
    }
+/*footer end*/
+
+
+/*search begin*/
+  .right .search {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    height: 80px;
+    background-color: #fff;
+  }
+  .search form {
+    position: relative;
+    top: 19px;
+    left: 19px;
+  }
+    .search input {
+      width: 169px;
+      height: 40px;
+      border: 1px solid #ddd;
+      border-right: none;
+      vertical-align: middle;
+      outline: none;
+      text-indent: 4em;
+      background: url(../img/search.png) no-repeat 8px 6px;
+    }
+
+    .search button {
+      width: 50px;
+      height: 42px;
+      border: 1px solid #ddd;
+      vertical-align: middle;
+      outline: none;
+      background-color: #ddd;
+      font-size: 20px;
+      color: #fff;
+    }
+
+    .search input:focus {
+      border: 1px solid #000;
+      border-right: none;
+    }
+
+    input:focus + button {
+      border: 1px solid #333;
+      background-color: #888;
+    }
+/*search end*/
 
 
 
 /*home*/
+
+/*banner begin*/
 #home .banner {
   width: 100%;
   height: 525px;
@@ -175,8 +228,10 @@ footer {
       .banner .content p {
         line-height: 150%;
       }
+/*banner end*/
 
 
+/*contain begin*/
 #home .contain .txt {
   margin-top: 10px;
   margin-right: 10px;
@@ -198,7 +253,10 @@ footer {
     line-height: 170%;
     text-indent: 2em;
   }
+/*begin end*/
 
+
+/*introduce begin*/
 #home .introduce {
   margin-top: 108px;
   width: 100%;
@@ -229,3 +287,535 @@ footer {
     text-indent: 2em;
     line-height: 170%;
   }
+/*introduce end*/
+
+
+
+/*blog*/
+
+/*left begin*/
+#blog .left {
+  width: 709px;
+  padding-bottom: 333px;
+}
+  #blog .left .post {
+    position: relative;
+    margin-top: 20px;
+    padding: 23px 18px 40px 18px;
+    min-height: 370px;
+    background-color: #fff;
+  }
+    #blog .piece {
+      position: absolute;
+      left: -52px;
+    }
+
+      #blog .date, #blog .type {
+      width: 50px;
+      height: 40px;
+      text-align: center;
+      text-indent: 0 !important;
+      line-height: 40px !important;
+      color: #fff;
+      }
+
+      #blog .date { background-color: #522a5c; }
+
+      #blog .type { background-color: #a660b7; }
+
+    #blog .post h2 {
+      font-size: 16px;
+      color: #a660b7;
+    }
+
+    #blog .post h3 {
+      margin-top: 11px;
+      margin-bottom: 18px;
+      font-size: 12px;
+      color: #666;
+    }
+
+    #blog .post p {
+      text-indent: 2em;
+      line-height: 27px;
+    }
+
+    #blog .post span {
+      position: absolute;
+      bottom: 15px;
+      right: 24px;
+      color: #999;
+    }
+
+  #blog .left nav {
+    margin-top: 20px;
+    text-align: center;
+  }
+    #blog .left .disable {
+      background-color: #E6E5E5;
+      color: #ABA1A1;
+    }
+
+    #blog .left .sel {
+      font-weight: 700;
+      background-color: #a660b7;
+      color: #fff;
+    }
+
+    #blog .left a {
+      padding: 12px 15px 12px 15px;
+      margin-left: 10px;
+      font-size: 11px;
+      line-height: 35px;
+      background-color: #fff;
+      color: #000;
+    }
+    #blog .left a:hover {
+      text-decoration: none;
+    }
+/*left end*/
+
+
+/*right begin*/
+#blog .right {
+  width: 260px;
+}
+
+
+
+/*classify begin*/
+  #blog .classify a {
+    display: block;
+    width: 256px;
+    height: 49px;
+    border-top: 1px solid #ddd;
+    border-left: 4px solid #dfc6e6;
+    font-size: 14px;
+    text-indent: 18px;
+    line-height: 49px;
+    background-color: #fff;
+    color: #666;
+  }
+    #blog .classify a:nth-child(3) {
+      border-left: 4px solid #522a5c;
+    }
+
+    #blog .classify a:last-child {
+      margin-bottom: 10px;
+      border-bottom: 1px solid #ddd;
+    }
+
+  #blog .classify a:hover {
+    border-left: 4px solid #522a5c;
+    text-decoration: none;
+  }
+/*classify end*/
+
+/*calendar begin*/
+  #blog .calendar {
+    padding-bottom: 20px;
+    min-height: 240px;
+    font-size: 12px;
+    text-align: center;
+    background-color: #fff;
+  }
+    #blog .calendar table {
+      margin: 0 auto;
+      border-spacing: 0;
+      border-collapse: collapse;
+      color: #888;
+    }
+
+    #blog .calendar caption {
+      margin-top: 24px;
+      margin-bottom: 16px;
+      letter-spacing: 4px;
+      font-size: 16px;
+      font-weight: 700;
+      color: #773c88;
+    }
+      #blog .calendar span {
+        padding: 0 10px;
+        text-align: center;
+      }
+
+      #blog .calendar tr {
+        padding-left: 36px;
+        padding-right: 36px;
+        border-top: 1px solid #dbd9d9;
+        border-bottom: 1px solid #dbd9d9;
+        height: 33px;
+      }
+        #blog .calendar td {
+          padding: 0 8px;
+        }
+
+        #blog .occur span {
+          padding: 5px;
+          background-color: #773c88;
+          color: #fff;
+        }
+
+        #blog .pre {
+          font-weight: 700;
+          color: #773c88;
+        }
+/*calendar end*/
+
+  #blog .right .tag {
+    margin-top: 10px;
+    height: 200px;
+    text-align: center;
+    background-color: #fff;
+    color: #773c88;
+  }
+    #blog .tag h3 {
+      padding-top: 15px;
+      padding-bottom: 15px;
+      font-size: 16px;
+      font-weight: 400;
+      text-indent: 2em;
+      text-align: left;
+      color: #666;
+    }
+
+    #blog .tag p {
+      padding: 4px 0;
+    }
+
+    #blog .big {
+      padding-right: 10px;
+      font-size: 26px;
+      font-weight: 700;
+    }
+
+    #blog .medium {
+      font-size: 16px;
+      font-weight: 700;
+      }
+    #blog .incre {
+      font-size: 17px;
+    }
+/*right end*/
+
+
+/*gallery*/
+/*left begin*/
+#gallery .left {
+  padding-bottom: 100px;
+}
+  #gallery .left  a {
+    float: left;
+    margin-top: 20px;
+    padding: 15px 20px 20px 20px;
+    border: 1px solid #eee;
+    font-size: 14px;
+    text-decoration: none;
+    background-color: #fff;
+    color: #000;
+  }
+
+  #gallery .left a:first-child { border-top:5px solid #4D57F4; }
+
+  #gallery .left a:first-child:hover {
+    border-top-color:#3840B4;
+    border-bottom: none;
+  }
+
+  #gallery .left a:nth-child(2) { border-top:5px solid #2CD65E; }
+
+  #gallery .left a:nth-child(2):hover {
+    border-top-color: #21A347;
+    border-bottom: none;
+  }
+
+  #gallery .left a:nth-child(3) { border-top:5px solid #A349A4; }
+
+  #gallery .left a:nth-child(3):hover {
+    border-top-color: #863C87;
+    border-bottom: none;
+  }
+
+  #gallery .left a:nth-child(4) { border-top:5px solid #FF7F27; }
+
+  #gallery .left a:nth-child(4):hover {
+    border-top-color: #E67425;
+    border-bottom: none;
+  }
+
+  #gallery .left a:nth-child(5) { border-top:5px solid #B97A57; }
+
+  #gallery .left a:nth-child(5):hover {
+    border-top-color: #845840;
+    border-bottom: none;
+  }
+
+  #gallery .falls {
+    padding: 20px;
+    width: 670px;
+    font-size: 13px;
+    background-color: #fff;
+  }
+
+  #gallery .columns {
+    -webkit-column-count: 2;
+    -webkit-column-gap: 10px;
+    -moz-column-count: 2;
+    -moz-column-gap: 10px;
+    -o-column-count: 2;
+    -o-column-gap: 10px;
+  }
+
+    #gallery .falls h2 {
+      margin-bottom: 4px;
+      font-size: 16px;
+      font-weight: 400;
+    }
+
+  #gallery .big-card, #gallery .water {
+    width: 330px;
+  }
+    #gallery .big-card .content {
+      width: 310px;
+      padding: 10px;
+      line-height: 22px;
+      color: #fff;
+    }
+
+    #gallery .content[j] {
+      background-color: #7092BE;
+    }
+
+    #gallery .content[f] {
+      background-color: #FF7F27;
+    }
+
+    #gallery .content[u] {
+      background-color: #A349A4;
+    }
+
+    #gallery .content[a] {
+      background-color: #B97A57;
+    }
+
+    #gallery .content p {
+      overflow: hidden;
+    }
+
+    #gallery .big-card img {
+      display: block;
+      width: 330px;
+      height: 150px;
+    }
+
+      #gallery .letter {
+        margin-right: 13px;
+        width: 28px;
+        height: 28px;
+        border: 1px solid #fff;
+        border-radius: 50%;
+        text-align: center;
+        line-height: 28px;
+      }
+
+  #gallery .card {
+    /*margin-top: 10px;*/
+    width: 160px;
+    height: 1px;
+  }
+    #gallery .card img {
+      display: block;
+      width: 160px;
+      height: 100px;
+    }
+
+    #gallery .card .content {
+      width: 140px;
+      padding: 10px;
+      line-height: 22px;
+      color: #fff;
+    }
+
+  #gallery .more a {
+    padding: 0;
+    width: 710px;
+    height: 52px;
+    border: none !important;
+    font-size: 12px;
+    text-align: center;
+    line-height: 52px;
+    background-color: #fff;
+  }
+    #gallery .more span {
+      padding-right: 8px;
+    }
+/*left end*/
+
+/*right begin*/
+#gallery .right {
+  margin-top: 57px;
+  margin-left: -30px;
+  width: 260px;
+}
+
+  #gallery .search {
+    width: 100%;
+  }
+
+  #gallery .rank {
+    padding: 20px;
+    width: 85%;
+    min-height: 180px;
+    background-color: #fff;
+  }
+    #gallery h3 {
+      padding-bottom: 15px;
+      font-weight: 400;
+      font-size: 16px;
+    }
+      #gallery li {
+        font-size: 14px;
+        line-height: 40px;
+      }
+        #gallery .num {
+          display: inline-block;
+          margin-right: 8px;
+          width: 18px;
+          height: 18px;
+          border-radius: 50%;
+          font-size: 12px;
+          text-align: center;
+          line-height: 18px;
+          background-color: #522a5c;
+          color: #fff;
+        }
+
+        #gallery .bar {
+          display: inline-block;
+          position: relative;
+          top: 13px;
+          margin-right: 8px;
+          width: 100px;
+          height: 16px;
+          border: 1px solid #522a5c;
+        }
+          #gallery .rank-scale {
+            display: inline-block;
+            position: relative;
+            top: -9px;
+            height: 16px;
+            background-color: #522a5c;
+          }
+
+
+
+
+
+
+
+
+
+
+/*about*/
+#about .wrap {
+  position: relative;
+  margin-top: 100px;
+  margin-bottom: 25px;
+  height: 1400px;
+  text-align: center;
+  background-color: #fff;
+  color: #000;
+}
+  #about .head {
+    margin-top: -90px;
+    margin-left: -90px;
+    width: 160px;
+    height: 160px;
+    border:11px solid #eee;
+    border-radius: 50%;
+  }
+
+  #about .cen {
+    position: absolute;
+    top: 0;
+    left: 50%;
+  }
+
+  #about .axle {
+    width: 6px;
+    height: 1400px;
+    background-color: #eee;
+  }
+
+  #about .txt {
+    position: relative;
+    font-size: 14px;
+  }
+    #about .txt img {
+      display: block;
+      margin-left: 138px;
+      margin-bottom: 30px;
+      width: 100px;
+      height: 100px;
+      border:5px solid #eee;
+      border-radius: 50%;
+    }
+
+    #about .name {
+      position: absolute;
+      top: 180px;
+      left: 300px;
+    }
+      #about .wrap .big {
+        font-size: 20px;
+        margin-right: 40px;
+      }
+
+      #about .wrap .right {
+        margin-left: 100px;
+        text-align: left;
+        line-height: 28px;
+      }
+
+      #about .name .right {
+        margin-left: 80px;
+        width: 320px;
+        text-indent: 2em;
+        text-align: left;
+      }
+
+    #about .contact, #about .education, #about .practice {
+      position: absolute;
+      left: 300px;
+    }
+
+    #about .contact {
+      top: 380px;
+    }
+
+    #about .education {
+      top: 650px;
+    }
+
+    #about .practice {
+      top: 960px;
+    }
+      #about .year {
+        margin-left: 40px;
+        margin-right: -47px;
+        width: 57px;
+        height: 25px;
+        border: 5px solid #eee;
+        border-radius: 10px;
+        text-align: center;
+        line-height: 25px;
+        background-color: #fff;
+      }
+
+      #about .next {
+        margin-top: 40px;
+        margin-left: 160px;
+      }
+
+      #about .right { margin-left: 90px; }
+/*about end*/
